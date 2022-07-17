@@ -27,12 +27,6 @@ public class TestsExamples {
 		Assert.assertEquals(statusCode, 200);
 	}
 
-	@Test(enabled = false)
-	public void test_sm_par() {
-		baseURI = "https://sm10.gk.x5.ru";
-		given().get("/api/v1/parameters?page=0&size=10").then().statusCode(200);
-	}
-
 	@Test
 	public void test_2() {
 		baseURI = "https://reqres.in/api/";
@@ -40,7 +34,8 @@ public class TestsExamples {
 		get("users?page=2").
 		then().
 		statusCode(200).
-		body("data.id[1]", equalTo(9));
+		body("data.id[1]", equalTo(8))
+		.log().all();
 	}
 
 }
