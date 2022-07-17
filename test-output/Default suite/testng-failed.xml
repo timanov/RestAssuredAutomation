@@ -5,7 +5,7 @@
     <classes>
       <class name="tests.GetAndPostExample">
         <methods>
-          <include name="testGet"/>
+          <include name="testPost"/>
         </methods>
       </class> <!-- tests.GetAndPostExample -->
     </classes>
