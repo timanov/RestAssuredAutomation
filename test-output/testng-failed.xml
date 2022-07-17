@@ -5,7 +5,7 @@
     <classes>
       <class name="tests.TestsExamples">
         <methods>
-          <include name="test_sm_par"/>
+          <include name="test_2"/>
         </methods>
       </class> <!-- tests.TestsExamples -->
     </classes>

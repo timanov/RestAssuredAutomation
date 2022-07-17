@@ -5,6 +5,9 @@ import org.testng.annotations.Test;
 
 import static io.restassured.RestAssured.*; //чтобы не писать RestAssured.get, имопртируем статичный класс
 import io.restassured.response.Response;
+import static io.restassured.matcher.RestAssuredMatchers.*;
+import static org.hamcrest.Matchers.*;
+
 
 public class TestsExamples {
 
@@ -23,19 +26,21 @@ public class TestsExamples {
 
 		Assert.assertEquals(statusCode, 200);
 	}
-	
-	@Test
+
+	@Test(enabled = false)
 	public void test_sm_par() {
-		baseURI = "http://sm10.gk.x5.ru";
+		baseURI = "https://sm10.gk.x5.ru";
 		given().get("/api/v1/parameters?page=0&size=10").then().statusCode(200);
 	}
 
 	@Test
 	public void test_2() {
 		baseURI = "https://reqres.in/api/";
-		given().get("users?page=2").then().statusCode(200);
+		given().
+		get("users?page=2").
+		then().
+		statusCode(200).
+		body("data.id[1]", equalTo(9));
 	}
-	
-	
 
 }
