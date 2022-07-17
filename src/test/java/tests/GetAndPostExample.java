@@ -5,6 +5,7 @@ import org.testng.annotations.Test;
 import static io.restassured.RestAssured.*;
 import static io.restassured.matcher.RestAssuredMatchers.*;
 import static org.hamcrest.Matchers.*;
+import io.restassured.http.*;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -42,10 +43,14 @@ public class GetAndPostExample {
 		
 		baseURI = "https://reqres.in/api";
 		given().
+			header("Content-Type", "application/json").
+			contentType(ContentType.JSON).
+			accept(ContentType.JSON).
 			body(request.toJSONString()).
 		when().
 			post("/users").
 		then().
-			statusCode(201);
+			statusCode(201)
+			.log().all();
 	}
 }
