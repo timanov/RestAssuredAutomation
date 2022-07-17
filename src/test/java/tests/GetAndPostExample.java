@@ -36,9 +36,16 @@ public class GetAndPostExample {
 		JSONObject request = new JSONObject();
 		
 		request.put("name","Raghav");
-		request.put("job", "Teacher")
+		request.put("job", "Teacher");
 		
 		System.out.println(request.toJSONString());
+		
+		baseURI = "https://reqres.in/api";
+		given().
+			body(request.toJSONString()).
+		when().
+			post("/users").
+		then().
+			statusCode(201);
 	}
-
 }
