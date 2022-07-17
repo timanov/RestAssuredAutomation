@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="1" total="2" passed="1" failed="0" skipped="0">
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2022-07-17T17:11:33Z" name="Default suite" finished-at="2022-07-17T17:11:35Z" duration-ms="1669">
+  <suite started-at="2022-07-17T17:17:49Z" name="Default suite" finished-at="2022-07-17T17:17:51Z" duration-ms="1978">
     <groups>
     </groups>
-    <test started-at="2022-07-17T17:11:33Z" name="Default test" finished-at="2022-07-17T17:11:35Z" duration-ms="1669">
-      <class name="tests.GetAndPostExample">
-        <test-method signature="testPost()[pri:0, instance:tests.GetAndPostExample@11bb571c]" started-at="2022-07-17T17:11:33Z" name="testPost" finished-at="2022-07-17T17:11:35Z" duration-ms="1647" status="PASS">
+    <test started-at="2022-07-17T17:17:49Z" name="Default test" finished-at="2022-07-17T17:17:51Z" duration-ms="1978">
+      <class name="tests.PutPatchDeleteExamples">
+        <test-method signature="testPut()[pri:0, instance:tests.PutPatchDeleteExamples@1ef6d34c]" started-at="2022-07-17T17:17:49Z" name="testPut" finished-at="2022-07-17T17:17:51Z" duration-ms="1953" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testPost -->
-      </class> <!-- tests.GetAndPostExample -->
+        </test-method> <!-- testPut -->
+      </class> <!-- tests.PutPatchDeleteExamples -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
